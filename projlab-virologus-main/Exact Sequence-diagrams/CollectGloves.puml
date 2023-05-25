@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+mainframe Collect Gloves
+
+actor Player
+
+Player -> "virologist: Virologist": collect()
+Activate "virologist: Virologist"
+
+"virologist: Virologist" -> "shelter:Shelter": getCollectable()
+Activate "shelter:Shelter"
+"shelter:Shelter" --> "virologist: Virologist": <Gloves>
+Deactivate "shelter:Shelter"
+
+"virologist: Virologist" -> "gloves:Gloves": collectBy(Virologist)
+
+Activate "gloves:Gloves"
+"gloves:Gloves" --> "virologist: Virologist":
+
+
+"gloves:Gloves" -> "gloves:Gloves"++ : applyEffect(virologist)
+
+ "gloves:Gloves" -> "gloves:Gloves"++ : getStrategy()
+ "gloves:Gloves" --> "gloves:Gloves"-- : defenseStrategy
+
+ "gloves:Gloves" -> "virologist: Virologist"++: setDefenseStrategy(defenseStrategy)
+"virologist: Virologist" --> "gloves:Gloves"--
+
+"gloves:Gloves" --> "gloves:Gloves"
+Deactivate "gloves:Gloves"
+"gloves:Gloves" --> "virologist: Virologist"
+
+
+
+
+"virologist: Virologist" --> Player
+
+
+
+Deactivate "virologist: Virologist"
+
+
+
+@enduml
+
+@enduml

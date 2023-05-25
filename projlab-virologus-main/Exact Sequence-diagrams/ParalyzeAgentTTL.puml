@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+mainframe Paralyzed Agent decreaseTTL
+
+actor GameControl
+
+
+GameControl->"virologist:Virologist": RefreshAgents()
+    "virologist:Virologist"->"paralyzed: Paralyzed":decreaseTTL()
+    Activate "paralyzed: Paralyzed"
+    "paralyzed: Paralyzed"-->"virologist:Virologist" --
+"virologist:Virologist"-->GameControl
+
+
+
+@enduml
+

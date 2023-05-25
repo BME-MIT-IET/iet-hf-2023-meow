@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+mainframe Steal AminoAcid
+
+actor Player
+
+Player -> "robberVirologist:Virologist"++: steal(robberVirologist, targetVirologist)
+
+
+"robberVirologist:Virologist" -> "targetvirologist:Virologist"++: handleSteal(AminoAcid, Virologist, Virologist)
+
+
+
+        note left "targetvirologist:Virologist"
+            The player chose AminoAcid
+        end note
+
+        "targetvirologist:Virologist"->"a:AminoAcid"++:discard(targetvirologist, amount:int)
+        "a:AminoAcid"->"targetvirologist:Virologist"++:SetAminoAcid(amount:int)
+        "targetvirologist:Virologist"-->"a:AminoAcid"--
+        "a:AminoAcid"-->"targetvirologist:Virologist"--
+
+    "targetvirologist:Virologist" -->"robberVirologist:Virologist"--: "a:AminoAcid"
+    "robberVirologist:Virologist"->"a:AminoAcid"++:collectby(robberVirologist)
+      "a:AminoAcid"->"robberVirologist:Virologist"++:SetAminoAcid()
+       "robberVirologist:Virologist"-->"a:AminoAcid"--
+    "a:AminoAcid"-->"robberVirologist:Virologist"--:
+
+
+"robberVirologist:Virologist" --> Player --
+@enduml

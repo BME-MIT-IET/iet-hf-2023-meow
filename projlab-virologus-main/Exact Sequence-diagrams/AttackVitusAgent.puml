@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+mainframe Attack VitusDance Agent
+
+actor Player
+
+Player -> "virologist: Virologist"++: useAgent(vitusDance, targetVirologist)
+"virologist: Virologist" -> "targetVirologist: Virologist"++: attack(vitusDance, virologist, targetVirologist)
+"targetVirologist: Virologist" -> "cloak: Cloak"++ : applyEffect(targetVirologist)
+
+"cloak: Cloak" -> "cloak: Cloak"++ : getStrategy()
+"cloak: Cloak" --> "cloak: Cloak"-- : defenseStrategy
+
+"cloak: Cloak" -> "targetVirologist: Virologist"++: setDefenseStrategy(defensestrategy)
+
+"targetVirologist: Virologist" -> "vitusDance: VitusDance"++ : applyEffect(targetVirologist)
+
+   "vitusDance: VitusDance" -> "vitusDance: VitusDance"++ : getStrategy()
+   "vitusDance: VitusDance" --> "vitusDance: VitusDance"-- : moveStrategy
+
+   "vitusDance: VitusDance" -> "targetVirologist: Virologist"++: setMoveStrategy(moveStrategy)
+   "targetVirologist: Virologist" --> "vitusDance: VitusDance"--
+
+   "vitusDance: VitusDance" --> "targetVirologist: Virologist"--
+
+
+"targetVirologist: Virologist" --> "cloak: Cloak" --
+"cloak: Cloak" --> "targetVirologist: Virologist" --
+
+
+"targetVirologist: Virologist" --> "virologist: Virologist" --
+
+"virologist: Virologist" --> Player --
+@enduml

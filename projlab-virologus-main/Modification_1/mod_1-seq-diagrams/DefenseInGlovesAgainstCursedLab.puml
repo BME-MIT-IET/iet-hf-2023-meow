@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+mainframe Virologist wear gloves when step on Cursed Lab
+
+
+participant "cursedland:CursedLab" as CursedLab
+participant "v: Virologist" as Virologist
+participant "glovesOnVirologist:Gloves" as Gloves
+
+CursedLab->Virologist++:attack(bearDance:Agent, attackerVirologist:Virologist)
+Virologist->Gloves++:defense(bearDance:Agent,v:Virologist, null)
+
+note right of Gloves
+Because the attackerVirologist parameter is "null" in attack(),
+won't be a counter attack
+end note
+
+Gloves->Gloves++:decreaseTTL()
+Gloves-->Gloves--
+opt life==0
+Gloves->Gloves++:discard(v:Virologist)
+Gloves-->Gloves--
+end opt
+Gloves-->Virologist--
+Virologist-->CursedLab--
+
+@enduml

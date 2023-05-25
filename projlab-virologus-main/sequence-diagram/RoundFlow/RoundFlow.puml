@@ -1,0 +1,48 @@
+2@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+mainframe Virologist default round
+
+actor GameControl
+GameControl -> Virologist++: startOfTurn()
+Virologist -> Virologist++: Virologist.roundRunStrategy.roundRun()
+
+loop while userinput!=EndOfTurn
+    actor Player
+    opt userinput=move
+        Player->Virologist:move()
+        Activate Virologist
+        Virologist-->Player
+        Deactivate Virologist
+    end
+    opt userinput=useAgent
+        Player->Virologist:useAgent()
+        Activate Virologist
+        Virologist-->Player
+        Deactivate Virologist
+    end
+end
+Virologist->GameControl:reportGenCode(Virologist, genCodes[])
+Activate GameControl
+
+ note right GameControl
+            If the virologist has all the codes, the game is over
+ end note
+
+
+GameControl-->Virologist
+deactivate GameControl
+
+Virologist->Virologist++: RefreshAgents()
+Virologist-->Virologist--
+Virologist-->Virologist--
+
+
+
+Virologist-->GameControl--
+
+
+
+@enduml

@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+mainframe Attack VitusDance Agent Protect
+
+actor Player
+
+Player -> "virologist: Virologist"++: useAgent(vitusDance, targetVirologist)
+"virologist: Virologist" -> "targetVirologist: Virologist"++: attack(vitusDance, virologist, targetVirologist)
+"targetVirologist: Virologist" -> "cloak: Cloak"++ : applyEffect(targetVirologist)
+
+"cloak: Cloak" -> "cloak: Cloak"++ : getStrategy()
+"cloak: Cloak" --> "cloak: Cloak"-- : defenseStrategy
+
+"cloak: Cloak" -> "targetVirologist: Virologist"++: setDefenseStrategy(defensestrategy)
+
+"targetVirologist: Virologist" -> "targetVirologist: Virologist"++: defense(vitusDance, virologist,  targetVirologist)
+
+
+note over "targetVirologist: Virologist"
+    If the virologist have this agent, he is invincible
+end note
+
+"targetVirologist: Virologist" --> "targetVirologist: Virologist" --
+
+"targetVirologist: Virologist" --> "cloak: Cloak" --
+"cloak: Cloak" --> "targetVirologist: Virologist" --
+
+
+"targetVirologist: Virologist" --> "virologist: Virologist" --
+
+"virologist: Virologist" --> Player --
+@enduml

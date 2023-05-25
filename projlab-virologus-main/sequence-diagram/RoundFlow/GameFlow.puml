@@ -1,0 +1,22 @@
+by Zoli
+
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+mainframe GameFlow
+
+actor GameControl
+loop while someone not won
+    loop all virologists while someone not won
+        GameControl -> Virologist: startOfTurn()
+        Activate Virologist
+
+        Virologist-->GameControl
+        Deactivate Virologist
+    end
+end
+
+@enduml
+
