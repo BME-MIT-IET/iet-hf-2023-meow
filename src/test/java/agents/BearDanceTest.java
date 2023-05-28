@@ -10,6 +10,9 @@ import org.mockito.Mockito;
 
 import java.util.List;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+
 
 public class BearDanceTest {
 
@@ -35,13 +38,9 @@ public class BearDanceTest {
 
         Mockito.verify(newField).acceptVirologist(virologist);
         Mockito.verify(newField).destroy();
-        ArgumentCaptor<BearDance> b = ArgumentCaptor.forClass(BearDance.class);
-        ArgumentCaptor<Virologist> v = ArgumentCaptor.forClass(Virologist.class);
 
         // a virologist ágenst használ a másik virologisten
-        Mockito.verify(virologist).useAgent(b.capture(), v.capture());
+        Mockito.verify(virologist).useAgent(any(BearDance.class), eq(other));
 
-        Assertions.assertEquals(BearDance.class, b.getValue().getClass());
-        Assertions.assertEquals(other, v.getValue());
     }
 }
