@@ -1,4 +1,4 @@
-package java.collectables.equipments;
+package test.java.collectables.equipments;
 
 
 import main.java.collectables.equipments.Axe;

@@ -1,4 +1,4 @@
-package java.agents;
+package test.java.agents;
 
 import main.java.agents.BearDance;
 import main.java.fields.Field;
