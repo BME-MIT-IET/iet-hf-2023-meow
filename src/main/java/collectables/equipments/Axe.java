@@ -5,6 +5,14 @@ import main.java.virologist.Virologist;
 
 public class Axe extends Equipment implements MurderStrategyInterface {
 
+    public int getLife() {
+        return life;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
+    }
+
     //life of an Axe
     private int life = 1;
 
