@@ -1,12 +1,17 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/coREwzrI)
-
-### Az indításhoz szükséges commandok:
-
->`mvn package`
-
-> `java -cp target/meow-1.0-SNAPSHOT.jar main.java.Main`
+##Kövi meeting: 05.29. 16:00
 
 ---
+
+### Az indításhoz szükséges:
+
+Le kell tölteni a maven-t.  
+A projekt root mappájában egy cmd-t nyitni:
+
+`mvn package`  
+`java -cp target/meow-1.0-SNAPSHOT.jar main.java.Main`
+
+---
+
 ## Jelenleg kész / készül:
 ### Technológia fókusz
 - [x] Build keretrendszer beüzemelése, ha még nincs (Maven, Gradle...) + CI beüzemelése, ha még nincs (Actions, Travis, AppVeyor, Azure Pipelines...)
@@ -18,3 +23,8 @@
 - [ ] UI tesztek készítése (Selenium, Tosca, Appium...)
 - [ ] BDD tesztek készítése (Cucumber, Specflow...)
 - [ ] Manuális tesztek megtervezése, végrehajtása és dokumentálása vagy exploratory testing- Maven beüzemelése kész
+
+---
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/coREwzrI)
+
