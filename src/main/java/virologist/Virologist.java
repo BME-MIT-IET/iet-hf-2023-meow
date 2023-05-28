@@ -299,7 +299,7 @@ public class Virologist implements Serializable {
     public void refreshAgents() {
         for (int i = 0; i < agentlist.size(); i++) {
             agentlist.get(i).decreaseTTL(this);
-            if (agentlist.get(i).getTTL() == 0) agentlist.remove(agentlist.get(i));
+            if (agentlist.get(i).getTimeToLive() == 0) agentlist.remove(agentlist.get(i));
             //if(agentlist.get(i) == null) continue;
         }
     }

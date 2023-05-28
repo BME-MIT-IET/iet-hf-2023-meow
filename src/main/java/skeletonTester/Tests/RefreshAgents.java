@@ -21,11 +21,11 @@ public class RefreshAgents extends Test {
         Virologist virologist = new Virologist("bob");
         ArrayList<Agent> agents = new ArrayList<Agent>();
         Paralyzed par = new Paralyzed();
-        par.setTTL(20);
+        par.setTimeToLive(20);
         Protection prot = new Protection();
-        prot.setTTL(0);
+        prot.setTimeToLive(0);
         VitusDance vitusDance = new VitusDance();
-        vitusDance.setTTL(0);
+        vitusDance.setTimeToLive(0);
         agents.add(par);
         agents.add(prot);
         agents.add(vitusDance);

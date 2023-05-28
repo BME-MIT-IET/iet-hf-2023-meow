@@ -8,7 +8,7 @@ import java.io.Serializable;
  */
 public abstract class Agent implements Serializable {
 
-    private int TTL = 3;
+    private int timeToLive = 3;
 
     /**
      * Apply the agent's effect to the virologist
@@ -21,8 +21,8 @@ public abstract class Agent implements Serializable {
      * @param virologist the virologist who has the agent
      */
     public void decreaseTTL(Virologist virologist) {
-        this.TTL--;
-        if (this.TTL <= 0) {
+        this.timeToLive--;
+        if (this.timeToLive <= 0) {
             removeEffect(virologist);
         }
     }
@@ -38,15 +38,15 @@ public abstract class Agent implements Serializable {
      * At each turn, the agent's TTL is decremented by 1, and when it reaches 0, the agent is removed from the virologist
      * @return the TTL
      */
-    public int getTTL() {
-        return TTL;
+    public int getTimeToLive() {
+        return timeToLive;
     }
 
     /**
      * Sets the agent's TTL - Time To Live field
-     * @param TTL the TTL to set
+     * @param timeToLive the TTL to set
      */
-    public void setTTL(int TTL) {
-        this.TTL = TTL;
+    public void setTimeToLive(int timeToLive) {
+        this.timeToLive = timeToLive;
     }
 }

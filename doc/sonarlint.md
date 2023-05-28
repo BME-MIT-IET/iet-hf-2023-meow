@@ -1,4 +1,4 @@
-#SonarLink dokumentáció
+#SonarLint dokumentáció
 
 ---
 
