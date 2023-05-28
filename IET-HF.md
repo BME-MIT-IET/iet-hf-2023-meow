@@ -1,6 +1,4 @@
-# IET Házi Dokumentáció
 
----
 
 
 
