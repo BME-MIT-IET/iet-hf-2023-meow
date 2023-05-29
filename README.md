@@ -20,7 +20,7 @@ A projekt root mappájában egy cmd-t nyitni:
 - [x] Egységtesztek készítése/kiegészítése (xUnit...) + tesztek kódlefedettségének mérése és ez alapján tesztkészlet bővítése (JaCoCo, OpenCover, Coveralls, Codecov.io...)
 ### Termék/felhasználó fókusz
 - [ ] Nem-funkcionális jellemzők vizsgálata (teljesítmény, stresszteszt, biztonság, használhatóság...)
-- [ ] UI tesztek készítése (Selenium, Tosca, Appium...)
+- [x] UI tesztek készítése (Selenium, Tosca, Appium...)
 - [ ] BDD tesztek készítése (Cucumber, Specflow...)
 - [ ] Manuális tesztek megtervezése, végrehajtása és dokumentálása vagy exploratory testing- Maven beüzemelése kész
 
