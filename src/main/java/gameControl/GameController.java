@@ -3,7 +3,7 @@ package main.java.gameControl;
 import main.java.collectables.gencodes.Gencode;
 import main.java.controller.VirologistController;
 import main.java.fields.Field;
-import main.java.skeletonTester.UserInputHandler;
+import main.java.utils.UserInputHandler;
 import main.java.utils.Random;
 import main.java.view.GameView;
 import main.java.view.PopUpView;

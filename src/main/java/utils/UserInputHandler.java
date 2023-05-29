@@ -1,4 +1,4 @@
-package main.java.skeletonTester;
+package main.java.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
