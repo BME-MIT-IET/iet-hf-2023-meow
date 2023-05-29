@@ -9,6 +9,14 @@ import main.java.virologist.Virologist;
  */
 public class Gloves extends Equipment implements DefenseStrategyInterface {
 
+    public int getLife() {
+        return life;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
+    }
+
     int life = 3;
 
     /**
