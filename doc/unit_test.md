@@ -16,3 +16,7 @@ A tesztek kódlefedettségének javítására hozzááadtam a VirologistTest és
 A Unit tesztek futtatása során felfedeztem egy hibát az Axe osztály murder metódusában:
 
 ![](screenshots/test.png)
+
+A bug javítása után minden test sikeresen fut:
+
+![](screenshots/test2.png)
