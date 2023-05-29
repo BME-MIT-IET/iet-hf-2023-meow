@@ -3,6 +3,8 @@ package main.java.collectables.equipments;
 import main.java.strategies.MurderStrategyInterface;
 import main.java.virologist.Virologist;
 
+
+
 public class Axe extends Equipment implements MurderStrategyInterface {
 
     //life of an Axe
@@ -33,7 +35,7 @@ public class Axe extends Equipment implements MurderStrategyInterface {
     @Override
     public void murder(Virologist murderervirologist, Virologist murderedvirologist) {
         //check the neighborship and the axe
-        if (life == 1 && murderedvirologist.getField().equals(murderedvirologist.getField())) {
+        if (life == 1) {
             murderedvirologist.die();
             System.out.println(murderervirologist.getName() + " murdered " + murderedvirologist.getName());
             life = 0;

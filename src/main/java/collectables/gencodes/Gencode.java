@@ -80,9 +80,7 @@ public class Gencode implements Collectable, Serializable {
      * @param virologist who discards the gencode
      */
     @Override
-    public void discard(Virologist virologist) {
-        return;
-    }
+    public void discard(Virologist virologist) {}
 
     public String toString() {
         return agent.getClass().getSimpleName();

@@ -69,33 +69,5 @@ public class Paralyzed extends Agent implements RoundRunStrategyInterface {
      * This function handles the virologist's round(can or can't do things)
      * @param virologist the virologist that is doing the round
      */
-    /*@Override
-    public void RoundRun(Virologist virologist) {
-        System.out.println("The virologist is paralyzed, you can do nothing to prevent your impending doom (at least for the time being)!");
-        String input;
-        int stepcounter = 0;
-        do {
-            input =
-                UserInputHandler.getUserInputString(
-                    "What to do dear " + virologist.getName() + "?",
-                    new String[] { "End Round", "Exit Game" }
-                );
-            switch (input) {
-                case "Exit Game":
-                    boolean shouldSaveGame = UserInputHandler.getUserInputBoolean("Do you want to save the game state?");
-                    if (shouldSaveGame) {
-                        String mapName = UserInputHandler.getUserInputString("Enter a name for the save: ");
-                        GameController.getInstance().saveGame(mapName);
-                    }
-                    System.out.println("You have exited the game");
-                    System.exit(0);
-                    return;
-                default:
-                    break;
-            }
-        } while (!input.equals("End Round"));
-        virologist.emptyCreatedAgents();
-        //The virologist can't do anything, hence the function is empty
-    }*/
 
 }

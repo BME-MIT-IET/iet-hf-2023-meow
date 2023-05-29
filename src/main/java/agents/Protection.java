@@ -3,6 +3,8 @@ package main.java.agents;
 import main.java.strategies.DefenseStrategyInterface;
 import main.java.virologist.Virologist;
 
+import java.util.logging.Logger;
+
 public class Protection extends Agent implements DefenseStrategyInterface {
 
     /**
@@ -31,7 +33,7 @@ public class Protection extends Agent implements DefenseStrategyInterface {
      */
     @Override
     public void defense(Agent agent, Virologist defenderVirologist, Virologist attackerVirologist) {
-        System.out.println("The target had protection agent applied on himself, the attack was ineffective!");
+        Logger.getLogger(this.getClass().getName()).info("The target had protection agent applied on himself, the attack was ineffective!");
         //Nothing happens, hence this function is empty
     }
 }

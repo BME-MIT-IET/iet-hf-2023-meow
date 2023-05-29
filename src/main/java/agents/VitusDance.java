@@ -4,6 +4,8 @@ import main.java.strategies.MoveStrategyInterface;
 import main.java.utils.Random;
 import main.java.virologist.Virologist;
 
+import java.util.logging.Logger;
+
 public class VitusDance extends Agent implements MoveStrategyInterface {
 
     /**
@@ -38,6 +40,6 @@ public class VitusDance extends Agent implements MoveStrategyInterface {
         virologist.getField().removeVirologist(virologist);
         virologist.getField().getNeighbors().get(nextstep).acceptVirologist(virologist);
 
-        System.out.println(virologist.getName() + " has moved to " + virologist.getField().getClass().getSimpleName());
+        Logger.getLogger(this.getClass().getName()).info(virologist.getName() + " has moved to " + virologist.getField().getClass().getSimpleName());
     }
 }
