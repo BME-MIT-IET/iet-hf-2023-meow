@@ -10,7 +10,7 @@ import main.java.fields.Field;
 import main.java.fields.Shelter;
 import main.java.gameControl.GameController;
 import main.java.strategies.*;
-import main.java.skeletonTester.UserInputHandler;
+import main.java.utils.UserInputHandler;
 import main.java.strategies.DefenseStrategyInterface;
 import main.java.strategies.MoveStrategyInterface;
 import main.java.strategies.RoundRunStrategyInterface;
