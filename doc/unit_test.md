@@ -5,18 +5,18 @@ A feladat unit tesztek készítése volt, majd a kódlefedettség vizsgálata é
 
 A Code Coverage JaCoCo-val vizsgálva:
 
-![](screenshots/jacoco.png)
+![](screenshots/unit_test/jacoco.png)
 
 A tesztek kódlefedettségének javítására hozzááadtam a VirologistTest és NucleicAcidTest osztályokat:
 
-![](screenshots/coverage1.png)
+![](screenshots/unit_test/coverage1.png)
 
-![](screenshots/coverage2.png)
+![](screenshots/unit_test/coverage2.png)
 
 A Unit tesztek futtatása során felfedeztem egy hibát az Axe osztály murder metódusában:
 
-![](screenshots/test.png)
+![](screenshots/unit_test/test.png)
 
 A bug javítása után minden test sikeresen fut:
 
-![](screenshots/test2.png)
+![](screenshots/unit_test/test2.png)
