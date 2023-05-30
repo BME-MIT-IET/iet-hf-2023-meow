@@ -3,12 +3,24 @@ package main.java.collectables.equipments;
 import main.java.agents.Agent;
 import main.java.strategies.DefenseStrategyInterface;
 import main.java.virologist.Virologist;
+import java.security.SecureRandom;
 import java.util.Random;
 
 /**
  * Class for the Cloak objects. With a Cloak, the attacks towards the virologost can fail, with a gicen percentage
  */
 public class Cloak extends Equipment implements DefenseStrategyInterface {
+
+    private  Random rand;
+
+    public Cloak() {
+        try{
+            rand = SecureRandom.getInstanceStrong();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * Apply and remove gloves effect on the virologist's defense strategy
@@ -34,8 +46,7 @@ public class Cloak extends Equipment implements DefenseStrategyInterface {
      */
     @Override
     public void defense(Agent agent, Virologist defender, Virologist attacker) {
-        Random r = new Random();
-        double chance = r.nextDouble();
+        double chance = rand.nextDouble();
         //decide with a random whether the defending was succesful
         if (chance > 0.843) {
             agent.applyEffect(defender);

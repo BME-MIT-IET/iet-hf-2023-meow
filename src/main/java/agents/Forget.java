@@ -1,6 +1,5 @@
 package main.java.agents;
 
-import main.java.collectables.gencodes.Gencode;
 import main.java.virologist.Virologist;
 import java.util.ArrayList;
 
@@ -11,7 +10,7 @@ public class Forget extends Agent {
      * @param virologist the virologist to apply the effect on
      */
     public void applyEffect(Virologist virologist) {
-        virologist.setGencodes(new ArrayList<Gencode>());
+        virologist.setGencodes(new ArrayList<>());
     }
 
     /**
