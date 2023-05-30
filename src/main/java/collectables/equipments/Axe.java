@@ -41,7 +41,7 @@ public class Axe extends Equipment implements MurderStrategyInterface {
     @Override
     public void murder(Virologist murderervirologist, Virologist murderedvirologist) {
         //check the neighborship and the axe
-        if (life == 1) {
+        if (life == 1 && !murderedvirologist.equals(murderervirologist)) {
             murderedvirologist.die();
             System.out.println(murderervirologist.getName() + " murdered " + murderedvirologist.getName());
             life = 0;
