@@ -7,7 +7,7 @@ import main.java.collectables.gencodes.Gencode;
 import main.java.collectables.matters.AminoAcid;
 import main.java.collectables.matters.NucleicAcid;
 import main.java.fields.*;
-import main.java.skeletonTester.UserInputHandler;
+import main.java.utils.UserInputHandler;
 import main.java.virologist.Virologist;
 import java.util.ArrayList;
 import java.util.List;
