@@ -103,8 +103,8 @@ class VirologistTest {
 
         virologist.setAgentlist(agentlist);
 
-        when(agent1.getTTL()).thenReturn(1);
-        when(agent2.getTTL()).thenReturn(0);
+        when(agent1.getTimeToLive()).thenReturn(1);
+        when(agent2.getTimeToLive()).thenReturn(0);
 
         virologist.refreshAgents();
 
