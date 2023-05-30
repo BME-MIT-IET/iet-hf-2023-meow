@@ -12,7 +12,7 @@ on:
   push:
     branches:
       - main
-      - 20-sonarcloud-analízis
+      - 12-unit-test
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
