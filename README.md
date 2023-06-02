@@ -21,7 +21,16 @@ A projekt root mappájában egy cmd-t nyitni:
 - [ ] UI tesztek készítése (Selenium, Tosca, Appium...)
 - [ ] BDD tesztek készítése (Cucumber, Specflow...)
 
+
+ ### A Manuális tesztek készen.
+  Egyelőre egy pdf-et tettem be a dokumentációkhoz és mivel
+  nincs kedvem átírni .md fájlra, mert sok képem van,
+  ezért remlem jó lesz így. Ha nem akkor átírom xdd. (Keve)
 ---
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/coREwzrI)
+
+
+
+
 
