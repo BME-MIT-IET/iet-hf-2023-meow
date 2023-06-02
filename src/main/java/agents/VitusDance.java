@@ -1,7 +1,6 @@
 package main.java.agents;
 
 import main.java.strategies.MoveStrategyInterface;
-import main.java.utils.Random;
 import main.java.virologist.Virologist;
 
 import java.util.logging.Logger;
@@ -33,7 +32,7 @@ public class VitusDance extends Agent implements MoveStrategyInterface {
     @Override
     public void move(Virologist virologist, int nextTileIndex) {
         //get a random tile to step
-        Random r = new Random();
+        main.java.utils.RandomExtra r = new main.java.utils.RandomExtra();
         int nextstep = r.randomBetween(0, virologist.getField().getNeighbors().size() - 1);
 
         //step to the given tile

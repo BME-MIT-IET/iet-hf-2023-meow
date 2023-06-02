@@ -4,7 +4,6 @@ import main.java.collectables.gencodes.Gencode;
 import main.java.controller.VirologistController;
 import main.java.fields.Field;
 import main.java.utils.UserInputHandler;
-import main.java.utils.Random;
 import main.java.view.GameView;
 import main.java.view.PopUpView;
 import main.java.virologist.Virologist;
@@ -110,7 +109,7 @@ public class GameController implements Serializable {
      * Loads a game state from a file.
      * @param fileName
      */
-    public void loadGame(String fileName) {
+    public static void loadGame(String fileName) {
         try {
             //FileInputStream fis = new FileInputStream(new File(GAME_SAVE_LOCATION + fileName));
             byte[] data;
@@ -147,7 +146,7 @@ public class GameController implements Serializable {
         virologistNames.forEach(name -> allVirologists.add(new Virologist(name)));
         map = new GameMap(3, 3);
         List<Field> fields = map.getFields();
-        Random random = new Random();
+        main.java.utils.RandomExtra random = new main.java.utils.RandomExtra();
         for (Virologist virologist : allVirologists) {
             //Pick a random field for each virologist
             fields.get(random.randomBetween(0, fields.size() - 1)).acceptVirologist(virologist);
