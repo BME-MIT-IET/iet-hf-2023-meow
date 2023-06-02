@@ -3,6 +3,7 @@
 ---
 
 A SonarCloud hozzáférést később kaptuk meg addig a statikus analízis első felét sonarlintben végeztem a fejlesztőkörnyezetben.
+SonarCloudban a manuális analízist beállítottam a gyakorlaton ismertettett lépésekkel, ehez szükség volt a maven.yaml és a pom.xml szerkesztésére a githubon.
 ## Javítások
 
 ### Bugok:
