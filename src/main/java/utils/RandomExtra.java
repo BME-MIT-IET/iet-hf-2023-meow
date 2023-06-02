@@ -1,6 +1,6 @@
 package main.java.utils;
 
-public class Random extends java.util.Random {
+public class RandomExtra extends java.util.Random {
 
     /**
      * Generates a random number between min and max, both inclusive.

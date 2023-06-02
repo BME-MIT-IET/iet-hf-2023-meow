@@ -156,7 +156,11 @@ public class GameEditor {
                 );
             switch (command) {
                 case "Equipment":
-                    equipmentSelect().collectBy(virologist);
+                    try {
+                        equipmentSelect().collectBy(virologist);
+                    }catch(NullPointerException e){
+                        e.printStackTrace();
+                    }
                     break;
                 case "Gencode":
                     Gencode gencode = gencodeSelect();

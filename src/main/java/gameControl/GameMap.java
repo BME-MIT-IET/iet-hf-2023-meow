@@ -7,7 +7,7 @@ import main.java.collectables.gencodes.Gencode;
 import main.java.collectables.matters.AminoAcid;
 import main.java.collectables.matters.NucleicAcid;
 import main.java.fields.*;
-import main.java.utils.Random;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -16,7 +16,7 @@ import java.util.List;
 public class GameMap implements Serializable {
 
     List<Field> fields;
-    private Random rand;
+    private main.java.utils.RandomExtra rand;
 
     /**
      * Generate a random gencode
@@ -25,7 +25,7 @@ public class GameMap implements Serializable {
      */
     public GameMap(int minFieldCount, int maxFieldCount) {
         fields = new ArrayList<>();
-        rand = new Random();
+        rand = new main.java.utils.RandomExtra();
         generateMap(minFieldCount, maxFieldCount);
     }
 
@@ -50,7 +50,7 @@ public class GameMap implements Serializable {
     }
 
     private void generateField(int minCount, int maxCount) {
-        Random rand = new Random();
+        main.java.utils.RandomExtra rand = new main.java.utils.RandomExtra();
         int regularFieldCount = rand.randomBetween(minCount, maxCount);
         for (int i = 0; i < regularFieldCount; i++) {
             storeField(new Field());
@@ -58,7 +58,7 @@ public class GameMap implements Serializable {
     }
 
     private void generateLab(int minCount, int maxCount) {
-        Random rand = new Random();
+        main.java.utils.RandomExtra rand = new main.java.utils.RandomExtra();
         int labCount = rand.randomBetween(minCount, maxCount);
         for (int i = 0; i < labCount; i++) {
             storeField(new Lab(new ArrayList<Collectable>(List.of(generateRandomGencode()))));
@@ -66,7 +66,7 @@ public class GameMap implements Serializable {
     }
 
     private void generateCursedLab(int minCount, int maxCount) {
-        Random rand = new Random();
+        main.java.utils.RandomExtra rand = new main.java.utils.RandomExtra();
         int labCount = rand.randomBetween(minCount, maxCount);
         for (int i = 0; i < labCount; i++) {
             storeField(new CursedLab(new ArrayList<Collectable>(List.of(generateRandomGencode()))));
@@ -74,7 +74,7 @@ public class GameMap implements Serializable {
     }
 
     private void generateShelter(int minCount, int maxCount) {
-        Random rand = new Random();
+        main.java.utils.RandomExtra rand = new main.java.utils.RandomExtra();
         int shelterCount = rand.randomBetween(minCount, maxCount);
         for (int i = 0; i < shelterCount; i++) {
             ArrayList<Collectable> collectables = new ArrayList<>();
@@ -87,7 +87,7 @@ public class GameMap implements Serializable {
     }
 
     private void generateStorage(int minCount, int maxCount) {
-        Random rand = new Random();
+        main.java.utils.RandomExtra rand = new main.java.utils.RandomExtra();
         int storageCount = rand.randomBetween(minCount, maxCount);
         for (int i = 0; i < storageCount; i++) {
             //Infinity storage of amino acids, and or nucleic acids
@@ -122,7 +122,7 @@ public class GameMap implements Serializable {
      * @return The random generated gencode
      */
     private Gencode generateRandomGencode() {
-        Random rand = new Random();
+        main.java.utils.RandomExtra rand = new main.java.utils.RandomExtra();
         //Get random gencode Forget, Paralyzed, Protection, VitusDance
         Agent agent;
         switch (rand.nextInt(4)) {
@@ -149,7 +149,7 @@ public class GameMap implements Serializable {
     }
 
     private Equipment generateRandomEquipment() {
-        Random rand = new Random();
+        main.java.utils.RandomExtra rand = new main.java.utils.RandomExtra();
         //Get random equipment, Bag, Cloak, Gloves
         Equipment equipment;
         switch (rand.nextInt(4)) {

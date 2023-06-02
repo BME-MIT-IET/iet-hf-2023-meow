@@ -28,6 +28,7 @@ public class DefaultRoundRun implements RoundRunStrategyInterface, Serializable 
     public Collectable handleSteal(Collectable coll, Virologist targetVirologist) {
         return null;
     }
+    private final static String VIROLOGISTSTEAL = "Virologist Steal";
 
     @Override
     public void roundRun() {
@@ -85,12 +86,12 @@ public class DefaultRoundRun implements RoundRunStrategyInterface, Serializable 
         Collectable coll = null;
 
         String[] options = virologist.getField().getVirologists().stream().map(Virologist::getName).toArray(String[]::new);
-        int virologistId = PopUpView.selectOption("Select a virologist to rob", "Virologist Steal", options);
+        int virologistId = PopUpView.selectOption("Select a virologist to rob", VIROLOGISTSTEAL, options);
         if (virologistId == -1) return;
 
         String stealType = PopUpView.selectOptionString(
             "What do you want to steal?",
-            "Virologist Steal",
+                VIROLOGISTSTEAL,
             new String[] { "Matter", "Equipment" }
         );
 
@@ -99,16 +100,16 @@ public class DefaultRoundRun implements RoundRunStrategyInterface, Serializable 
                 virologist.getField().getVirologists().get(virologistId).getNucleicAcid() == 0 &&
                 virologist.getField().getVirologists().get(virologistId).getAminoAcid() == 0
             ) {
-                PopUpView.showError("You cannot steal that kind of collectable", "Virologist Steal");
+                PopUpView.showError("You cannot steal that kind of collectable", VIROLOGISTSTEAL);
             } else {
                 String acidType = PopUpView.selectOptionString(
                     "What to do want to steal?",
-                    "Virologist Steal",
+                        VIROLOGISTSTEAL,
                     new String[] { "AminoAcid", "NucleicAcid" }
                 );
                 if (acidType.equals("AminoAcid")) {
                     if (virologist.getField().getVirologists().get(virologistId).getAminoAcid() == 0) {
-                        PopUpView.showError("You cannot steal that kind of collectable", "Virologist Steal");
+                        PopUpView.showError("You cannot steal that kind of collectable", VIROLOGISTSTEAL);
                     } else {
                         virologist.steal(
                             new AminoAcid(virologist.getField().getVirologists().get(virologistId).getAminoAcid()),
@@ -117,7 +118,7 @@ public class DefaultRoundRun implements RoundRunStrategyInterface, Serializable 
                     }
                 } else {
                     if (virologist.getField().getVirologists().get(virologistId).getNucleicAcid() == 0) {
-                        PopUpView.showError("You cannot steal that kind of collectable", "Virologist Steal");
+                        PopUpView.showError("You cannot steal that kind of collectable", VIROLOGISTSTEAL);
                     } else {
                         virologist.steal(
                             new NucleicAcid(virologist.getField().getVirologists().get(virologistId).getNucleicAcid()),
@@ -128,7 +129,7 @@ public class DefaultRoundRun implements RoundRunStrategyInterface, Serializable 
             }
         } else {
             if (virologist.getField().getVirologists().get(virologistId).getEquipments().size() == 0) {
-                PopUpView.showError("You cannot steal that kind of collectable", "Virologist Steal");
+                PopUpView.showError("You cannot steal that kind of collectable", VIROLOGISTSTEAL);
             } else {
                 options =
                     virologist
@@ -139,7 +140,7 @@ public class DefaultRoundRun implements RoundRunStrategyInterface, Serializable 
                         .stream()
                         .map(e -> e.getClass().getSimpleName())
                         .toArray(String[]::new);
-                int selectedEquipment = PopUpView.selectOption("What do you want do steal?", "Virologist Steal", options);
+                int selectedEquipment = PopUpView.selectOption("What do you want do steal?", VIROLOGISTSTEAL, options);
                 if (selectedEquipment != -1) {
                     virologist.steal(
                         virologist.getField().getVirologists().get(virologistId).getEquipments().get(selectedEquipment),
