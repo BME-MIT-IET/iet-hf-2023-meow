@@ -163,7 +163,7 @@ public class Virologist implements Serializable {
      * @param moveStrategy the move strategy to be set on the virologist, this affects the way he moves
      */
     public void setMoveStrategy(MoveStrategyInterface moveStrategy) {
-        if (!this.moveStrategy.get(this.moveStrategy.size() - 1).getClass().getSimpleName().equals("BearDance")) this.moveStrategy.add(
+        if (!(this.moveStrategy.get(this.moveStrategy.size() - 1) instanceof BearDance)) this.moveStrategy.add(
                 moveStrategy
             ); else this.moveStrategy.add(0, moveStrategy);
     }

@@ -97,11 +97,12 @@ public class GameController implements Serializable {
 
         File file = new File(GAME_SAVE_LOCATION + fileName + ".ser");
         //Loop through the fields and save them to a file
-        FileOutputStream fos = new FileOutputStream(file);
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(getInstance());
-        oos.close();
-        fos.close();
+        try (FileOutputStream fos = new FileOutputStream(file)) {
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(getInstance());
+            oos.close();
+            fos.close();
+        }
         System.out.println("Game saved");
     }
 
@@ -112,8 +113,10 @@ public class GameController implements Serializable {
     public void loadGame(String fileName) {
         try {
             //FileInputStream fis = new FileInputStream(new File(GAME_SAVE_LOCATION + fileName));
-            FileInputStream fis = new FileInputStream(new File(fileName));
-            byte[] data = fis.readAllBytes();
+            byte[] data;
+            try (FileInputStream fis = new FileInputStream(new File(fileName))) {
+                data = fis.readAllBytes();
+            }
             ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data));
             Object o = ois.readObject();
             ois.close();
