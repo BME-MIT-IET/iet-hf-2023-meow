@@ -1,0 +1,42 @@
+3
+y
+9
+Field
+Field
+Field
+Shelter
+Shelter
+Shelter
+Storage
+Storage
+Storage
+3
+Alice
+0
+0
+Exit
+Bob
+1
+Exit
+Gandalf
+2
+Exit
+Create Agent
+Move
+1
+End Round
+Move
+1
+Use Agent
+Collect
+1
+End Round
+Kill
+0
+Move
+1
+Kill
+0
+End Round
+Exit Game
+n

@@ -1,0 +1,20 @@
+3
+y
+2
+Cursed Lab
+Cursed Lab
+2
+Alice
+0
+Equipment
+Axe
+Exit
+Bob
+1
+Equipment
+Axe
+Exit
+Move
+0
+Exit Game
+n

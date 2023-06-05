@@ -1,0 +1,9 @@
+3
+n
+y
+0
+Discard
+Equipment
+0
+Exit Game
+n

@@ -1,0 +1,19 @@
+nullWelcome to the Virologist Enterprise Game!
+----------------------------------------------------------
+1 - Skeleton tests - depricated legacy function
+2 - Integration tests
+3 - Game
+[UserInput Int ( 2 - 3 )]What would you like to run?: 3
+[UserInput Boolean] Do you want to enter game editor mode? (y/n): n
+[UserInput Boolean] Do you want to load a game? (y/n): y
+0: 000.ser
+[UserInput Int ( 0 - 0 )]Which game save you want to load?: 0
+Game loaded
+[UserInput String] What to do dear Alice?(Move, Collect, Steal, Discard, Create Agent, Use Agent, Kill, End Round, Exit Game): Discard
+[UserInput String] What do you want to discard?(Matter, Equipment): Equipment
+Discard Cloak :command 0
+[UserInput Int ( 0 - 0 )]What do you want do discard?: 0
+Alice has discarded a(n) Cloak
+[UserInput String] What to do dear Alice?(Move, Collect, Steal, Discard, Create Agent, Use Agent, Kill, End Round, Exit Game): Exit Game
+[UserInput Boolean] Do you want to save the game state? (y/n): n
+You have exited the game
