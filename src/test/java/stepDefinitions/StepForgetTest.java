@@ -1,4 +1,4 @@
-package agents;
+package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import main.java.agents.Forget;
@@ -11,7 +11,7 @@ import main.java.collectables.gencodes.Gencode;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
-public class CucForgetTest {
+public class StepForgetTest {
     private Virologist virologist;
 
     @Given("^a virologist with agents in their collection$")

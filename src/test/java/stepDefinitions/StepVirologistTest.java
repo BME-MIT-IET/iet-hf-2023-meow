@@ -1,4 +1,4 @@
-package virologist;
+package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import main.java.virologist.Virologist;
@@ -7,7 +7,7 @@ import main.java.agents.Agent;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 
-public class CucVirologistTest {
+public class StepVirologistTest {
 
     private Virologist virologist1;
     private Virologist virologist2;

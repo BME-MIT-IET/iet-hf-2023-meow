@@ -1,4 +1,4 @@
-package agents;
+package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import main.java.agents.Paralyzed;
@@ -7,7 +7,7 @@ import main.java.virologist.Virologist;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CucParalyzedTest {
+public class StepParalyzedTest {
     private main.java.virologist.Virologist virologist;
     private main.java.agents.Paralyzed paralyzed;
 

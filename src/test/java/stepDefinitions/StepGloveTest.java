@@ -1,4 +1,4 @@
-package collectables.equipments;
+package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import main.java.collectables.equipments.Gloves;
@@ -8,7 +8,7 @@ import main.java.agents.Agent;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 
-public class CucGloveTest {
+public class StepGloveTest {
     private Gloves gloves;
     private Virologist virologist;
     private Agent agent;
