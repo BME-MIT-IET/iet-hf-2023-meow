@@ -20,6 +20,20 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>6.11.0</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>6.11.0</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
@@ -38,16 +52,10 @@
       <version>5.2.0</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>6.11.0</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>6.11.0</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -72,17 +80,27 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+            <includes>
+              <include>**/*Test.java</include>
+            </includes>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-maven-plugin</artifactId>
+          <version>6.11.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
-		  <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.csb.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+          <configuration>
+              <archive>
+                  <manifest>
+                      <mainClass>com.csb.Main</mainClass>
+                  </manifest>
+              </archive>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>

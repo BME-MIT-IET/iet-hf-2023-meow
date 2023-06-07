@@ -1,7 +1,3 @@
-## Kövi meeting: 05.29. 16:00
-
----
-
 ### Az indításhoz szükséges:
 
 Le kell tölteni a maven-t.  
@@ -12,21 +8,14 @@ A projekt root mappájában egy cmd-t nyitni:
 
 ---
 
-## Jelenleg kész:
+##Kész:
 ### Technológia fókusz
 - [x] Build keretrendszer beüzemelése, ha még nincs (Maven, Gradle...) + CI beüzemelése, ha még nincs (Actions, Travis, AppVeyor, Azure Pipelines...)
-- [ ] Manuális kód átvizsgálás elvégzése az alkalmazás egy részére (GitHub, Gerrit...) + Statikus analízis eszköz futtatása és jelzett hibák átnézése (SonarCloud, SpotBugs, VS Code Analyzer, Codacy, Coverity Scan...)
+- [x] Manuális kód átvizsgálás elvégzése az alkalmazás egy részére (GitHub, Gerrit...) + Statikus analízis eszköz futtatása és jelzett hibák átnézése (SonarCloud, SpotBugs, VS Code Analyzer, Codacy, Coverity Scan...)
 - [x] Egységtesztek készítése/kiegészítése (xUnit...) + tesztek kódlefedettségének mérése és ez alapján tesztkészlet bővítése (JaCoCo, OpenCover, Coveralls, Codecov.io...)
 ### Termék/felhasználó fókusz
-- [ ] UI tesztek készítése (Selenium, Tosca, Appium...)
-- [ ] BDD tesztek készítése (Cucumber, Specflow...)
-
-
- ### A Manuális tesztek készen.
-  Egyelőre egy pdf-et tettem be a dokumentációkhoz és mivel
-  nincs kedvem átírni .md fájlra, mert sok képem van,
-  ezért remlem jó lesz így. Ha nem akkor átírom xdd. (Keve)
----
+- [x] UI tesztek készítése (Selenium, Tosca, Appium...)
+- [x] BDD tesztek készítése (Cucumber, Specflow...)
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/coREwzrI)
 
