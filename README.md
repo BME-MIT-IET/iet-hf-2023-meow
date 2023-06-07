@@ -8,7 +8,7 @@ A projekt root mappájában egy cmd-t nyitni:
 
 ---
 
-##Kész:
+## Kész:
 ### Technológia fókusz
 - [x] Build keretrendszer beüzemelése, ha még nincs (Maven, Gradle...) + CI beüzemelése, ha még nincs (Actions, Travis, AppVeyor, Azure Pipelines...)
 - [x] Manuális kód átvizsgálás elvégzése az alkalmazás egy részére (GitHub, Gerrit...) + Statikus analízis eszköz futtatása és jelzett hibák átnézése (SonarCloud, SpotBugs, VS Code Analyzer, Codacy, Coverity Scan...)
