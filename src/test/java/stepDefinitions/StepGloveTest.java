@@ -38,11 +38,6 @@ public class StepGloveTest {
         gloves.defense(agent, virologist, attackerVirologist);
     }
 
-    @Then("the virologist attacks back using the agent")
-    public void virologistAttacksBack() {
-        // Add your assertions here to check if the virologist attacked back using the agent
-    }
-
     @Then("the gloves' life is decreased by 1")
     public void glovesLifeDecreased() {
         assertEquals(initialLife-1, gloves.getLife());
